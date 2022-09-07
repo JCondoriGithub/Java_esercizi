@@ -2,35 +2,32 @@ import java.util.Scanner;
 
 public class Main {
 
-/*Realizza un programma per gestire una coda di interi di max 5 elementi attraverso una classe Coda che deve prevedere dei metodi per l'inserimento e 
-per l'estrazione di un elemento.*/
+/* Scrivi una classe T che contenga un orario valido. Deve essere possibile impostare un orario in ore,minuti,secondi; 
+la classe deve prevedere un metodo per la validazione di un orario, un metodo per aggiungere un orario ad un altro e un metodo per sottrarre due orari . */
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        String opzione = "";
 
-        Coda coda1 = new Coda();
+        System.out.println("inserisci un'orario:");
 
-        System.out.println("Seleziona una delle seguenti opzioni:\n 1) inserisci\n 2) estrai\n 3) stampa\n 4) termina");
-        
-        while(!opzione.equals("termina")) {
-            opzione = scanner.nextLine();
+        int ora = scanner.nextInt();
+        int min = scanner.nextInt();
+        int sec = scanner.nextInt();
 
-            switch(opzione) {
-                case "inserisci":
-                    coda1.push();
-                    break;
-                case "estrai":
-                    coda1.extract();
-                    break;
-                case "stampa":
-                    coda1.print();
-                    break;
-                default:
-                    scanner.close();
-            }
-        }
+        T t1 = new T(ora, min, sec);
 
-        System.out.println("programma terminato");
+        int ora2 = scanner.nextInt();
+        int min2 = scanner.nextInt();
+        int sec2 = scanner.nextInt();
+
+        T t2 = new T(ora2, min2, sec2);
+        t1.add(t2);
+
+        int ora3 = scanner.nextInt();
+        int min3 = scanner.nextInt();
+        int sec3 = scanner.nextInt();
+
+        T t3 = new T(ora3, min3, sec3);
+        t2.sub(t3);
     }
 }
