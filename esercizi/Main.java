@@ -1,33 +1,28 @@
 import java.util.Scanner;
 
 public class Main {
-
-/* Scrivi una classe T che contenga un orario valido. Deve essere possibile impostare un orario in ore,minuti,secondi; 
-la classe deve prevedere un metodo per la validazione di un orario, un metodo per aggiungere un orario ad un altro e un metodo per sottrarre due orari . */
+    
+/*Un oggetto della classe InsiemeDiStringhe consente di rappresentare un qualunque insieme finito di stringhe. l'insieme di stringhe devono essere contenute in un array T.
+ * un metodo che restituisce la stringa di lunghezza massima
+ * un metodo che restituisce la stringa contenente più spazi 
+ * un metodo che visualizza tutte le stringhe che hanno il prefisso specificato . 
+*/
     public static void main(String[] args) {
-
+        
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("inserisci un'orario:");
+        System.out.println("massimo quante stringhe?");
+        int l = scanner.nextInt();
 
-        int ora = scanner.nextInt();
-        int min = scanner.nextInt();
-        int sec = scanner.nextInt();
+        InsiemeDiStringhe ogg1 = new InsiemeDiStringhe(l);
 
-        T t1 = new T(ora, min, sec);
+        ogg1.setT();
+        ogg1.maxString();
+        ogg1.maxSpaces();
 
-        int ora2 = scanner.nextInt();
-        int min2 = scanner.nextInt();
-        int sec2 = scanner.nextInt();
+        System.out.println("cerca le stringhe con prefisso:");
+        int p = scanner.nextInt();
 
-        T t2 = new T(ora2, min2, sec2);
-        t1.add(t2);
-
-        int ora3 = scanner.nextInt();
-        int min3 = scanner.nextInt();
-        int sec3 = scanner.nextInt();
-
-        T t3 = new T(ora3, min3, sec3);
-        t2.sub(t3);
+        ogg1.preString(p);
     }
 }
