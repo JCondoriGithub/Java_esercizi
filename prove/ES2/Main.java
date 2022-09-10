@@ -1,3 +1,4 @@
+import java.util.Scanner;
 import java.util.HashMap;
 
 public class Main {
@@ -8,12 +9,30 @@ restituisce il risultato della valutazione dell’espressione nell’ambiente in
 il programma principale leggerà una stringa e la passerà alla calcolatrice. */
     public static void main(String[] args) {
         
-        String espr = "xy*xz+/";
+        Scanner scanner = new Scanner(System.in);
+        
 
-        HashMap<Character, Double> ambi = new HashMap<Character, Double>();
-        ambi.put('x', 10.0);
-        ambi.put('y', 5.0);
-        ambi.put('z', 4.0);
+        System.out.println("inserisci l'espressione:");
+        String espr = scanner.nextLine();
+
+        System.out.println("imposta l'ambiente:");
+        HashMap<String, Double> ambi = new HashMap<String, Double>();
+
+        String risp = "si";
+        while(risp.equals("si")) {
+
+            System.out.println("inserisci la chiave:");
+            String key = scanner.nextLine();
+
+            System.out.println("inserisci il valore:");
+            Double value = scanner.nextDouble();
+            scanner.nextLine();
+
+            ambi.put(key, value);
+
+            System.out.println("vuoi ancora continuare?\ninserisci si o no");
+            risp = scanner.nextLine();
+        }
 
         Calcolatrice calc1 = new Calcolatrice(espr, ambi);
         calc1.calcola();

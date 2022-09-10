@@ -4,10 +4,10 @@ import java.util.Stack;
 public class Calcolatrice {
     
     private String espressione;
-    Stack stack = new Stack();
-    private HashMap<Character, Double> ambiente = new HashMap<Character, Double>();
+    Stack <Double> stack = new Stack<Double>();
+    private HashMap<String, Double> ambiente = new HashMap<String, Double>();
 
-    public Calcolatrice(String espr, HashMap<Character, Double> ambi) {
+    Calcolatrice(String espr, HashMap<String, Double> ambi) {
     
         this.espressione = espr;
         this.ambiente = ambi;
@@ -32,7 +32,7 @@ public class Calcolatrice {
                     divisione();
                     break;
                 default:
-                    stack.push(ambiente.get(espressione.charAt(i)));
+                    stack.push(ambiente.get(String.valueOf(espressione.charAt(i))));
             }
         }
     }
@@ -41,8 +41,8 @@ public class Calcolatrice {
 
         double a, b;
 
-        b = (double) stack.pop();
-        a = (double) stack.pop();
+        b = stack.pop();
+        a = stack.pop();
 
         stack.push(a + b);
     }
@@ -51,8 +51,8 @@ public class Calcolatrice {
 
         double a, b;
 
-        b = (double) stack.pop();
-        a = (double) stack.pop();
+        b = stack.pop();
+        a = stack.pop();
 
         stack.push(a - b);
     }
@@ -61,8 +61,8 @@ public class Calcolatrice {
 
         double a, b;
 
-        b = (double) stack.pop();
-        a = (double) stack.pop();
+        b = stack.pop();
+        a = stack.pop();
 
         stack.push(a * b);
     }
@@ -71,8 +71,8 @@ public class Calcolatrice {
 
         double a, b;
 
-        b = (double) stack.pop();
-        a = (double) stack.pop();
+        b = stack.pop();
+        a = stack.pop();
 
         stack.push(a / b);
     }
