@@ -1,28 +1,32 @@
 import java.util.Scanner;
 
+/* Scrivi un programma che istanziato un vettore di interi di 5 posizioni chieda all'utilizzatore di inserire un numero in una posizione specificata;
+ gestire l'eventualità che vengano violati i limiti dell'array . */
+
 public class Main {
-    
-/*Un oggetto della classe InsiemeDiStringhe consente di rappresentare un qualunque insieme finito di stringhe. l'insieme di stringhe devono essere contenute in un array T.
- * un metodo che restituisce la stringa di lunghezza massima
- * un metodo che restituisce la stringa contenente più spazi 
- * un metodo che visualizza tutte le stringhe che hanno il prefisso specificato . 
-*/
+
     public static void main(String[] args) {
-        
+
+        int[] T = new int[5];
+
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("massimo quante stringhe?");
-        int l = scanner.nextInt();
+        int count = 0;
+        while(count < 5) {
 
-        InsiemeDiStringhe ogg1 = new InsiemeDiStringhe(l);
+            System.out.println("inserisci il numero: ");
+            int num = scanner.nextInt();
+            System.out.println("alla posizione: ");
+            int pos = scanner.nextInt();
 
-        ogg1.setT();
-        ogg1.maxString();
-        ogg1.maxSpaces();
-
-        System.out.println("cerca le stringhe con prefisso:");
-        int p = scanner.nextInt();
-
-        ogg1.preString(p);
+            try{
+                T[pos] = num;
+                count++;
+            }catch(ArrayIndexOutOfBoundsException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        for(int i: T)
+            System.out.println(i);
     }
 }
