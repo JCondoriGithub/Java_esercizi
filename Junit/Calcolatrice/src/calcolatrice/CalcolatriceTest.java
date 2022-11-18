@@ -3,24 +3,37 @@ package calcolatrice;
 import static org.junit.Assert.*;
 
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class CalcolatriceTest {
 
-	Calcolatrice calc;
+	static Calcolatrice calc;
+	
+	@BeforeClass
+	public static void beforeClass() {		// viene eseguito solo una vola prima dei metodi di test, deve essere statico
+		
+		System.out.println("beforeClass");
+		calc = new Calcolatrice();
+	}
+	
+	@AfterClass
+	public static void afterClass() {		// viene eseguito solo una volta dopo i metodi di test, deve essere statico
+		System.out.println("afterClass");
+	}
 	
 	@Before
 	public void before() {		// viene eseguito prima di ogni metodo di test
 		
 		System.out.println("before");
-		calc = new Calcolatrice();
+		calc.clear();
 	}
 	
 	@After
 	public void after() {		// viene eseguito dopo ogni metodo di test
 		System.out.println("after");
-		calc.clear();
 	}
 	
 	@Test
