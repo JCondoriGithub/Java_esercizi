@@ -2,11 +2,41 @@ package calcolatrice;
 
 public class Calcolatrice {
 
-	public static int somma(int a, int b) {
-		return a + b;
+	private int lastResult;
+	
+	public Calcolatrice() {
+		lastResult = 0;
 	}
 	
-	public static int sottrazione(int a, int b) {
-		return a - b;
+	public int add(int a, int b) {
+		
+		lastResult = a + b;
+		return lastResult;
+	}
+	
+	public int sub(int a,  int b) {
+		
+		lastResult = a - b;
+		return lastResult;
+	}
+	
+	public int add(int v) {
+		
+		lastResult += v;
+		return lastResult;
+	}
+	
+	public int sub(int v) {
+		
+		lastResult -= v;
+		return lastResult;
+	}
+	
+	public int getLastResult() {
+		return lastResult;
+	}
+	
+	public void clear() {
+		lastResult = 0;
 	}
 }

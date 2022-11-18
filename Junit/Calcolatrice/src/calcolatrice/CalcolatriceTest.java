@@ -2,29 +2,40 @@ package calcolatrice;
 
 import static org.junit.Assert.*;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 public class CalcolatriceTest {
 
-/*	@Test
-	public void test() {
-		fail("Not yet implemented");	// se si invoca il metodo "fail", automaticamente il test fallisce
-	}
-*/
-
-	@Test	// si indica che questo è un metodo di test
-	public void testSomma() {
+	Calcolatrice calc;
+	
+	@Before
+	public void before() {		// viene eseguito prima di ogni metodo di test
 		
-		int risultato = Calcolatrice.somma(2, 3);
-		int risultatoPrevisto = 5;
-		assertEquals(risultatoPrevisto, risultato);		// si verifica che le variabili siano uguali
+		System.out.println("before");
+		calc = new Calcolatrice();
+	}
+	
+	@After
+	public void after() {		// viene eseguito dopo ogni metodo di test
+		System.out.println("after");
+		calc.clear();
 	}
 	
 	@Test
-	public void testSottrazione() {
+	public void testAdd() {
 		
-		int actual = Calcolatrice.sottrazione(3, 2);
-		int expected = 1;
+		int actual = calc.add(3, 2);
+		int expected = 5;
+		assertEquals(expected, actual);
+	}
+	
+	@Test public void testAddLR() {
+		
+		calc.add(3, 2);
+		int actual = calc.getLastResult();
+		int expected = 5;
 		assertEquals(expected, actual);
 	}
 }
