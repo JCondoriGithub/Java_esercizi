@@ -32,8 +32,26 @@ public class Calcolatrice {
 		return lastResult;
 	}
 	
+	public int div(int a, int b) {
+		
+		if(b == 0)
+			throw new ArithmeticException("non puoi dividere per zero!");
+		
+		lastResult = a / b;
+		return lastResult;
+	}
+	
 	public int getLastResult() {
 		return lastResult;
+	}
+	
+	public void slowMethod() {
+		
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
 	}
 	
 	public void clear() {

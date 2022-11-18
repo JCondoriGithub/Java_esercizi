@@ -31,11 +31,30 @@ public class CalcolatriceTest {
 		assertEquals(expected, actual);
 	}
 	
-	@Test public void testAddLR() {
+	@Test 
+	public void testAddLR() {
 		
 		calc.add(3, 2);
 		int actual = calc.getLastResult();
 		int expected = 5;
 		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testDiv() {
+		
+		int actual = calc.div(4, 2);
+		int expected = 2;
+		assertEquals(expected, actual);
+	}
+	
+	@Test(expected = ArithmeticException.class)		// "expected" indica che il metodo che si testa deve generare un'eccezione di tipo "ArithmeticException", altrimenti il test fallisce
+	public void testDiv0() {
+		calc.div(5, 0);
+	}
+	
+	@Test(timeout = 100)			// "timeout" indica che se l'esecuzione del metodo che si testa impiega più tempo di quello indicato, il test fallisce
+	public void testSlowMethod() {
+		calc.slowMethod();
 	}
 }
