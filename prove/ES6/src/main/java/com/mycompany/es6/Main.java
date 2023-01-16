@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * la classe chiede all'utente le figure da creare che verranno salvate nell'arraylist <strong>figure</strong>
- * modifica le cordinate x, y del primo elemento di <strong>figure</strong>
- * stampa a video le caratteristiche di tutte le figure create
+ * la classe: chiede all'utente le figure da creare che verranno salvate nell'arraylist <strong>figure</strong>, 
+ * modifica le cordinate x, y del primo elemento di <strong>figure</strong>, 
+ * stampa a video le caratteristiche di tutte le figure create, 
  * stampa le figure che hanno le coordinate x, y uguali a quelle dati dall'utente
  * @author josue
  */

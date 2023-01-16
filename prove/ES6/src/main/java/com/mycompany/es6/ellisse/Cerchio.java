@@ -3,7 +3,7 @@ package com.mycompany.es6.ellisse;
 import java.util.Scanner;
 
 /**
- * la classe rappresenta il <b>cerchio<7b>
+ * la classe rappresenta il <b>cerchio</b>
  * @author josue
  */
 public class Cerchio extends Ellisse{

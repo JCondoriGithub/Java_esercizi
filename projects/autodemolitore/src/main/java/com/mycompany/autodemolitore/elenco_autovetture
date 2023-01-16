@@ -1,0 +1,16 @@
+Autoarticolato{cabinaRibaltabile=false, cassone=aperto, maxPesoTrasportabile=-1824894508
+dataIngresso=2011-01-07, capannone=capannoneB, numeroParcheggio=-2042749544, produttore=Scania, modello=camion, tipo=Autoarticolato, motore=Motore{cilindrata=362, tipoMotore=volumetrico, alimentazione=diesel}
+pneumatici={1=Pneumatico{larghezza=250, altezza=58, diametro=250/58 R12}, 2=Pneumatico{larghezza=257, altezza=53, diametro=257/53 R59}, 3=Pneumatico{larghezza=255, altezza=51, diametro=255/51 R66}, 4=Pneumatico{larghezza=253, altezza=59, diametro=253/59 R92}, 5=Pneumatico{larghezza=257, altezza=55, diametro=257/55 R95}, 6=Pneumatico{larghezza=259, altezza=53, diametro=259/53 R78}, 7=Pneumatico{larghezza=259, altezza=51, diametro=259/51 R77}, 8=Pneumatico{larghezza=258, altezza=53, diametro=258/53 R48}}}
+
+Autoveicolo{maxPesoTrasportabile=-1270266919, tipoCarrozzeria=ef3b775d-dcf3-4f72-8fcd-afa9fc5b0854, quatroRuote=true
+dataIngresso=2019-03-15, capannone=capannoneA, numeroParcheggio=243456899, produttore=Fiat, modello=punto, tipo=Autoveicolo, motore=Motore{cilindrata=772, tipoMotore=volumetrico, alimentazione=diesel}
+pneumatici={1=Pneumatico{larghezza=255, altezza=58, diametro=255/58 R51}, 2=Pneumatico{larghezza=259, altezza=59, diametro=259/59 R10}, 3=Pneumatico{larghezza=253, altezza=50, diametro=253/50 R21}, 4=Pneumatico{larghezza=251, altezza=51, diametro=251/51 R55}}}
+
+Motoveicoli{maxPesoTrasportabile=85835450, rimorchio=true
+dataIngresso=2000-11-21, capannone=capannoneA, numeroParcheggio=1953736194, produttore=Scania, modello=moto, tipo=Motoveicoli, motore=Motore{cilindrata=835, tipoMotore=volumetrico, alimentazione=diesel}
+pneumatici={1=Pneumatico{larghezza=259, altezza=55, diametro=259/55 R76}, 2=Pneumatico{larghezza=259, altezza=58, diametro=259/58 R93}}}
+
+Motofurgonati{maxPesoTrasportabile=381158679, controlloMezzo=manubrio
+dataIngresso=2000-01-02, capannone=capannoneD, numeroParcheggio=-261395734, produttore=Scania, modello=treruote, tipo=Motofurgonati, motore=Motore{cilindrata=527, tipoMotore=volumetrico, alimentazione=diesel}
+pneumatici={1=Pneumatico{larghezza=257, altezza=59, diametro=257/59 R88}, 2=Pneumatico{larghezza=253, altezza=51, diametro=253/51 R69}, 3=Pneumatico{larghezza=250, altezza=55, diametro=250/55 R39}}}
+
