@@ -1,11 +1,14 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Mastermind {
     
-    private int[] codice = new int[4];
-    private int[] newCodice = new int[4];
-
+    int[] codice = new int[4];
+    int[] newCodice = new int[4];
     private int[] risposta = new int[4];
+    
+    int countN;
+    int countB;
 
     void generateCode() {
 
@@ -17,20 +20,25 @@ public class Mastermind {
         }
     }
 
-    void generateRisp() {
+    void generateRisp() throws TooNumbersException {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("\ninserisci una alla volta 4 cifre da 0 a 9:");
 
         for(int i = 0; i < 4; i++) {
-            risposta[i] = scanner.nextInt();
+        	
+        	int n = scanner.nextInt();
+        	
+        	if(String.valueOf(n).length() > 1)
+        		throw new TooNumbersException("il numero deve avere solo una cifra!");
+        	risposta[i] = n;
         }
     }
 
     void codeCheck() {
 
-        int countN = 0;
-        int countB = 0;
+        countN = 0;
+        countB = 0;
 
         for(int i = 0; i < risposta.length; i++) {
 

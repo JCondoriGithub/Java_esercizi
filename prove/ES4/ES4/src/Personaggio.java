@@ -1,8 +1,9 @@
+package ES4.src;
 public class Personaggio {
     
-    private String nome;
-    private String cognome;
-    private int punteggio;
+    String nome;
+    String cognome;
+    int punteggio;
 
     Personaggio(String nome, String cognome, int punteggio) {
 
